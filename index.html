@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="bn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bangladesh GI Heritage Map</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="gi-section">
+    <div class="gi-wrap">
+
+      <!-- LEFT: MAP -->
+      <div class="map-card">
+        <div class="map-title">
+          <h2>Bangladesh GI Heritage</h2>
+          <p>(জেলা) ক্লিক করো → ডান পাশে GI ডিটেইল + গল্প দেখাবে</p>
+
+          <div class="toolbar">
+            <label class="chk">
+              <input type="checkbox" id="toggleLabels" />
+              <span>সব জেলার নাম দেখাও</span>
+            </label>
+            <button id="resetBtn" class="btn">Reset</button>
+          </div>
+        </div>
+
+        <div class="map-stage">
+          <div id="mapHost" class="map-host">
+            <div class="loading" id="loading">Loading map…</div>
+          </div>
+          <div class="hint">
+            Tip: সব নাম একসাথে দেখালে overlap হতে পারে। (Hover/Click) UX সবচেয়ে clean.
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: INFO -->
+      <aside class="info-card">
+        <div class="badge">GI Product</div>
+        <h3 id="districtTitle">একটা জেলা সিলেক্ট করো</h3>
+        <p class="meta" id="giTitle">—</p>
+        <div class="story" id="giStory">জেলার বর্ডারে ক্লিক করলে এখানে তথ্য দেখাবে।</div>
+      </aside>
+
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
